@@ -220,6 +220,7 @@ post '/create_payment_intent' do
   #amount = calculate_price(payload[:products], payload[:shipping])
   amount = payload[:amount]
   description = payload[:description]
+  log_info("Hi zuko here")
 
   begin
     payment_intent = Stripe::PaymentIntent.create(
